@@ -40,6 +40,7 @@ public class FarmDeviceTypeHandler {
         query.where()
           .and().like("farmDeviceTypeKey", "%"+keyword+"%")
           .or().like("farmDeviceTypeName", "%"+keyword+"%")
+          .or().like("farmDeviceTypeDescription", "%"+keyword+"%")
           .build(spec);
         break;
       case "farmDeviceTypeKey":
@@ -52,10 +53,16 @@ public class FarmDeviceTypeHandler {
           .and().like("farmDeviceTypeName", "%"+keyword+"%")
           .build(spec);
         break;
+      case "farmDeviceTypeDescription":
+        query.where()
+          .and().like("farmDeviceTypeDescription", "%"+keyword+"%")
+          .build(spec);
+        break;
       default:
         query.where()
           .and().like("farmDeviceTypeKey", "%"+keyword+"%")
           .or().like("farmDeviceTypeName", "%"+keyword+"%")
+          .or().like("farmDeviceTypeDescription", "%"+keyword+"%")
           .build(spec);
         break;
     }

@@ -29,6 +29,9 @@ public class FarmDeviceType {
   // "°C", "%" 등
   private String farmDeviceTypeUnit;
 
+  // 장치 유형 설명
+  private String farmDeviceTypeDescription;
+
   /*
     장치가 더 추가되면 (예를들면 조명센서 추가) 해당 도메인에 필드만 추가하면됌
   */

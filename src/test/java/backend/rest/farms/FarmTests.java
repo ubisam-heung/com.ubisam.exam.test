@@ -67,7 +67,6 @@ public class FarmTests {
     Map<String, Object> req = new HashMap<>();
     req.put("title", "entity1");
     req.put("farmName", "A농장");
-    req.put("farmOwner", "김길동");
     req.put("farmLocation", "서울");
     req.put("farmPlantLinks", Set.of(farmPlantLink1, farmPlantLink2));
     req.put("farmDeviceLinks", Set.of(farmDeviceLink1, farmDeviceLink2));

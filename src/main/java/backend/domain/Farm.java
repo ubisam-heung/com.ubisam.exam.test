@@ -34,9 +34,6 @@ public class Farm {
   // 농장 이름
   private String farmName;
 
-  // 농장주
-  private String farmOwner; 
-
   // 농장 위치
   private String farmLocation;
 

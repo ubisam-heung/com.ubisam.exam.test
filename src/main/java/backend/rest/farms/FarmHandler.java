@@ -53,18 +53,12 @@ public class FarmHandler {
       case "farmAll":
         query.where()
           .and().like("farmName", "%"+keyword+"%")
-          .or().like("farmOwner", "%"+keyword+"%")
           .or().like("farmLocation", "%"+keyword+"%")
           .build(spec);
         break;
       case "farmName":
         query.where()
           .and().like("farmName", "%"+keyword+"%")
-          .build(spec);
-        break;
-      case "farmOwner":
-        query.where()
-          .and().like("farmOwner", "%"+keyword+"%")
           .build(spec);
         break;
       case "farmLocation":
@@ -75,7 +69,6 @@ public class FarmHandler {
       default:
         query.where()
           .and().like("farmName", "%"+keyword+"%")
-          .or().like("farmOwner", "%"+keyword+"%")
           .or().like("farmLocation", "%"+keyword+"%")
           .build(spec);
         break;

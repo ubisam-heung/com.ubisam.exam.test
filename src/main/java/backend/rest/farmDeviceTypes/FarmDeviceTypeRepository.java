@@ -12,6 +12,9 @@ import java.util.List;
 public interface FarmDeviceTypeRepository extends RestfulJpaRepository<FarmDeviceType, UUID>{
 
   @RestResource(exported = false)
-  List<FarmDeviceType> findByFarmDeviceTypeName(String farmDeviceTypeName); 
-  
+  List<FarmDeviceType> findByFarmDeviceTypeName(String farmDeviceTypeName);
+
+  @RestResource(exported = false)
+  List<FarmDeviceType> findByFarmDeviceTypeDescription(String farmDeviceTypeDescription);
+
 }
